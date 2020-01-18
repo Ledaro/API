@@ -2,7 +2,17 @@ const express = require('express');
 
 const app = express();
 
-//routes
+
+//Middlewares
+
+app.use('/posts', () => {
+
+    console.log("This is middleware running");
+});
+
+
+
+//Routes
 
 app.get('/', (req,res) => {
 
