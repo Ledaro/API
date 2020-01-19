@@ -18,11 +18,11 @@ app.get('/posts', (req,res) => {
 });
 
 
-
+  
 //Connect to db
 
-mongoose.connect('mongodb+srv://Sklep:kaka22@sklepwsb-sionk.mongodb.net/test?retryWrites=true&w=majority', () 
-=> console.log("connected to db!"))
+// mongoose.connect('mongodb+srv://Sklep:kaka22@sklepwsb-sionk.mongodb.net/test?retryWrites=true&w=majority', () 
+// => console.log("connected to db!"))
 
 
 
