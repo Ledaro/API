@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
+//const mongoose = require('mongoose');
 
 
 //Routes
@@ -20,9 +20,8 @@ app.get('/posts', (req,res) => {
 
   
 //Connect to db
-
 // mongoose.connect('mongodb+srv://Sklep:kaka22@sklepwsb-sionk.mongodb.net/test?retryWrites=true&w=majority', () 
-// => console.log("connected to db!"))
+ //=> console.log("connected to db!"))
 
 
 
