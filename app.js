@@ -36,4 +36,4 @@ console.log("connected to db!")
 
 
 //how do we start litening server
-//app.listen(3000);
+app.listen(3000);
