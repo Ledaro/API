@@ -8,12 +8,12 @@ router.get('/', (req,res) => {
 
 });
 
+router.post('/', (req,res) =>{
 
-router.get('/specific', (req,res) => {
-
-    res.send('We are on specific post');
+    console.log(req.body);
 
 });
+
 
 
 module.exports = router;
