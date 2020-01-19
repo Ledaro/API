@@ -1,23 +1,30 @@
 const mongoose = require('mongoose');
 
+//Schemat/wzór naszego zapytania
 const PostSchema = mongoose.Schema({
 
-    title: {
+    TytułKsiążki: {
         type: String,
         required: true
 },
 
-    description: {
+    OpisKsiążki: {
         type: String,
         required: true
 },
+    
+     AutorKsiążki: {
+            type: String,
+            required: true
+},
 
-    date: {
+    DataWydania: {
     
         type: Date,
-        default: Date.now
+        
 }
 
 });
 
+//Eksport na serwer
 module.exports = mongoose.model('Posts', PostSchema);

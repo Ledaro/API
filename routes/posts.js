@@ -1,18 +1,28 @@
 const express = require ('express');
+
+//Funkcja wywołująca routy z innych plików
 const router = express.Router();
+
+//Import naszego schematu
 const Post = require('../models/Post');
 
+
+
+//Odczyt posta
 router.get('/', async (req,res) => {
 
-    try{
+     try{
         const posts = await Post.find();
         res.json(posts);
-    }catch (err){
+    
+    } catch (err){
         res.json({message: err});
     }
 
 });
 
+
+//Post
 router.post  ('/', async (req,res) =>{
 
 
@@ -22,7 +32,7 @@ router.post  ('/', async (req,res) =>{
 
      });
 
-    try {
+     try {
     const savePost = await post.save()
     res.json(savePost);
     
@@ -33,11 +43,12 @@ router.post  ('/', async (req,res) =>{
 
 });
 
-router.get('/:postID', async (req,res) => {
+
+router.get('/:postId', async (req,res) => {
 
     try{
     
-    const post = await Post.findById(req.params.postID);
+    const post = await Post.findById(req.params.postId);
     res.json(post);
     } catch (err) {
         res.json({message: err});
@@ -47,7 +58,7 @@ router.get('/:postID', async (req,res) => {
 });
 
 
-
+//Usunięcie posta
 router.delete('/:postID', (req,res) => {
     try{
     const removePost = Post.remove({_id: req.params.postID})
@@ -60,7 +71,7 @@ router.delete('/:postID', (req,res) => {
 });
 
 
-//Update post
+//Update posta
 
 router.patch('/postID', (req,res) =>{
     try {
@@ -78,4 +89,6 @@ router.patch('/postID', (req,res) =>{
 });
 
 
+
+//Eksport routera
 module.exports = router;
