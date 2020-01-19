@@ -17,7 +17,6 @@ router.post('/', (req,res) =>{
     });
 
     post.save()
-    .exec()
     .then(data =>{
         res.json(data);
     })
