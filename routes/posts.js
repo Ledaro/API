@@ -10,21 +10,24 @@ router.get('/', (req,res) => {
 
 router.post('/', (req,res) =>{
 
-    const post = new Post({
-        title: req.body.title,
-        description: req.body.description
 
-    });
+    console.log(req.body);
 
-    post.save()
-    .then(data =>{
-        res.json(data);
-    })
+    // const post = new Post({
+    //     title: req.body.title,
+    //     description: req.body.description
 
-    .catch(err => {
+    // });
 
-        res.json({message: err});
-    })
+    // post.save()
+    // .then(data =>{
+    //     res.json(data);
+    // })
+
+    // .catch(err => {
+
+    //     res.json({message: err});
+    // })
 
 });
 
